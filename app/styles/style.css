@@ -16,6 +16,10 @@ a:hover {
   color: #333;
   text-decoration: none;
 }
+.header a.active {
+  color: #333;
+  text-decoration: none;
+}
 #base {
   position:absolute;
   z-index:0;
