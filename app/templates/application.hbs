@@ -1,0 +1,29 @@
+<div class="wrapper">
+  <header>
+    <div class="container">
+      <div class="row">
+        {{#link-to 'index' classNames='logo col-xs-1'}}LRUG{{/link-to}}
+
+        <nav class="header-menu col-xs-10">
+          <a href="#">Івенти</a>
+          {{#link-to 'jobs'}}Вакансії{{/link-to}}
+          <a href="#">Блог</a>
+          {{#link-to 'about'}}Про проект{{/link-to}}
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="container content">
+    {{outlet}}
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="social col-xs-4"></div>
+      <div class="copiright col-xs-6 ">&copy; 2014, Lviv Ruby User Group</div>
+    </div>
+  </div>
+</footer>

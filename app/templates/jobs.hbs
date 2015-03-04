@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-xs-8">
+    <h1>Вакансії для Ruby розробників</h1>
+
+    {{#each job in model}}
+      <div class="jobs">
+        <h2>{{#link-to 'job' job classNames="jobs-title" }}{{job.title}}{{/link-to}}</h2>
+        <div class="jobs-title-bottom">
+          <a href="#">{{job.city}}</a>
+          <span>{{job.price}} $</span>
+          <span>full-time</span>
+        </div>
+
+        <div class="jobs-description">
+          {{job.description}}
+        </div>
+
+      </div>
+    {{/each}}
+  </div>
+</div>

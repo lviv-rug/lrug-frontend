@@ -1,0 +1,141 @@
+﻿html, body {
+  margin: 0;
+  padding: 0;
+  font-size: $font-normal;
+  font-weight: 400;
+  font-style: normal;
+  height: 100%;
+  color: $color-black;
+  background: $color-white;
+}
+body > div {
+  height: 100%;
+}
+ul, ol { list-style: none }
+a {
+  outline: none;
+  color: $color-red;
+  box-shadow: 0 1px 0 $color-red;
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  text-decoration: none;
+}
+a:active,
+a:focus,
+a:hover {
+  text-decoration: none;
+  color: $color-red;
+  outline: none;
+}
+.logo {
+  font-size: $font-logo;
+  box-shadow: none;
+}
+.logo,
+.logo:hover {
+  color: $color-cinderella;
+}
+.header-menu {
+  flex-direction: row;
+  font-size: $font-h4;
+  font-weight: 400;
+}
+.header-menu a {
+  color: $color-white;
+  margin-left: 15px;
+  margin-right: 15px;
+  box-shadow: 0 1px 0 $color-terracotta;
+  position: relative;
+}
+.header-menu a:hover,
+.header-menu a.active {
+  color: $color-cornflower-lilac;
+  box-shadow: none;
+}
+.header-menu a.active:before {
+  content: '';
+  border: 10px solid transparent;
+  border-bottom: 5px $color-thunderbird solid;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  margin-left: -10px;
+}
+header {
+  background: $color-cinnabar;
+  border-bottom: 2px $color-thunderbird solid;
+  padding: 20px 0;
+}
+footer {
+  position: relative;
+  height: 20px;
+  margin-top: -60px;
+  padding: 20px 0;
+  border-top: 1px $color-mercury solid;
+}
+.copiright {
+  text-align: right;
+  font-size: $font-h4;
+}
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  padding-bottom: 80px;
+}
+.container {
+  margin: 0 auto;
+}
+.content {
+  padding-top: 50px;
+}
+
+h1 {
+  font-size: $font-h1;
+  line-height: 32px;
+  font-weight: normal;
+  color: $color-black;
+  margin: 0 0 10px 0;
+  width: 100%;
+}
+h2 {
+  font-size: $font-h2;
+  line-height: 28px;
+  font-weight: bold;
+  color: $color-black;
+  margin: 0 0 15px 0;
+  width: 100%;
+}
+h3 {
+  font-size: $font-h3;
+  line-height: 20px;
+  font-weight: normal;
+  margin: 0;
+  width: 100%;
+}
+.h3--bold {
+  font-weight: bold;
+}
+
+.img-circle {
+  width: 90px;
+  height: 90px;
+  background: $color-mercury;
+  border-radius: 100%;
+  max-width: none;
+  flex-basis: initial;
+}
+.description {
+  padding-left: 20px;
+  font-size: $font-h4;
+}
+.about-name {
+  font-weight: bold;
+  margin: 10px 0 2px;
+}
+.about-profession {
+  margin-bottom: 10px;
+}
+.about-email {
+  margin-bottom: 5px;
+}
