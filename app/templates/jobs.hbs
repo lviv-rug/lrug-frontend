@@ -4,7 +4,7 @@
 
     {{#each job in model}}
       <div class="jobs">
-        <div class="jobs-title">{{#link-to 'job' job }}{{job.title}}{{/link-to}}</div>
+        <h2>{{#link-to 'job' job classNames="jobs-title" }}{{job.title}}{{/link-to}}</h2>
         <div class="jobs-title-bottom">
           <a href="#">{{job.city}}</a>
           <span>{{job.price}} $</span>
