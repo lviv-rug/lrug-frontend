@@ -2,14 +2,20 @@
   <header>
     <div class="container">
       <div class="row">
-        {{#link-to 'index' classNames='logo col-xs-1'}}LRUG{{/link-to}}
+        {{#link-to 'index' classNames='logo col-xs-10 col-sm-1'}}LRUG{{/link-to}}
 
-        <nav class="header-menu col-xs-10">
-          <a href="#">Івенти</a>
-          {{#link-to 'jobs'}}Вакансії{{/link-to}}
-          <a href="#">Блог</a>
-          {{#link-to 'about'}}Про проект{{/link-to}}
-        </nav>
+        <div class="col-xs-12 col-sm-11">
+          <span class="menu-icon" {{action 'menu'}}>
+            menu
+          </span>
+
+          <nav class="header-menu show">
+            <a href="#">Івенти</a>
+            {{#link-to 'jobs'}}Вакансії{{/link-to}}
+            <a href="#">Блог</a>
+            {{#link-to 'about'}}Про проект{{/link-to}}
+          </nav>
+        </div>
       </div>
     </div>
   </header>
@@ -22,8 +28,8 @@
 <footer>
   <div class="container">
     <div class="row">
-      <div class="social col-xs-4"></div>
-      <div class="copiright col-xs-6 ">&copy; 2014, Lviv Ruby User Group</div>
+      <div class="social col-xs-12 col-sm-4"></div>
+      <div class="copiright col-xs-12 col-sm-6">&copy; 2014, Lviv Ruby User Group</div>
     </div>
   </div>
 </footer>
