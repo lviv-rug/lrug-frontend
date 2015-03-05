@@ -1,18 +1,27 @@
 <div class="row">
   <div class="col-xs-8">
     <div class="job">
-      <h1>{{title}}</h1>
+      <h1 class="color-red">{{title}}</h1>
       <div class="jobs-title-bottom">
         <a href="#">{{city}}</a>
         <span>{{price}} $</span>
-        <span>full-time</span>
+        <span>
+          {{#if job.job_time}}
+            full-time
+          {{else}}
+            part-time
+          {{/if}}
+        </span>
       </div>
+      <hr />
 
-      <p>{{description}}</p>
+      <p class="job-description">{{description}}</p>
 
       <div class="share">
         <h3 class="h3--bold">Поділитись вакансією з друзями</h3>
       </div>
+      <hr />
+
     </div>
   </div>
 </div>
