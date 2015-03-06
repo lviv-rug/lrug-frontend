@@ -23,6 +23,11 @@
       </div>
       <hr />
 
+      {{#each job in jobs}}
+        {{#link-to 'job' job classNames="jobs-title" }}{{job.title}}{{/link-to}} <br />
+      {{/each}}
+
+
     </div>
   </div>
 </div>
