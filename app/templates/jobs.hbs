@@ -8,11 +8,17 @@
         <div class="jobs-title-bottom">
           <a href="#">{{job.city}}</a>
           <span>{{job.price}} $</span>
-          <span>full-time</span>
+          <span>
+            {{#if job.jobTime}}
+              full-time
+            {{else}}
+              part-time
+            {{/if}}
+          </span>
         </div>
 
         <div class="jobs-description">
-          {{job.description}}
+          {{job.smallDescription}}
         </div>
 
       </div>

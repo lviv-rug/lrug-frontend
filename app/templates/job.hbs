@@ -6,14 +6,23 @@
       <div class="jobs-title-bottom">
         <a href="#">{{city}}</a>
         <span>{{price}} $</span>
-        <span>full-time</span>
+        <span>
+          {{#if jobTime}}
+            full-time
+          {{else}}
+            part-time
+          {{/if}}
+        </span>
       </div>
+      <hr />
 
       <div class="job-description">{{description}}</p>
 
       <div class="share">
         <h3 class="h3--bold">Поділитись вакансією з друзями</h3>
       </div>
+      <hr />
+
     </div>
   </div>
 </div>
