@@ -85,6 +85,7 @@ footer {
 }
 .container {
   margin: 0 auto;
+  position: relative;
 }
 .content {
   padding-top: 50px;
@@ -138,4 +139,65 @@ h3 {
 }
 .about-email {
   margin-bottom: 5px;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header-menu.hide {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  .logo {
+    margin-left: 20px;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .header-menu.show {
+    margin: 20px 0 -20px;
+    box-shadow: 0 -1px 0 $color-terracotta;
+  }
+  .header-menu a {
+    display: block;
+    padding: 10px 20px;
+    margin: 0;
+  }
+  .header-menu a:last-child,
+  .header-menu a.active:last-child,
+  .header-menu a:last-child:hover{
+    box-shadow: none;
+  }
+  .header-menu a:hover,
+  .header-menu a.active {
+    box-shadow: 0 1px 0 $color-terracotta;
+  }
+  .header-menu a.active:before {
+    border: 10px solid transparent;
+    border-left: 10px $color-thunderbird solid;
+    position: absolute;
+    left: 0;
+    bottom: auto;
+    margin-left: 0;
+  }
+
+  .content {
+    padding: 50px 20px 0;
+  }
+  .copiright {
+    text-align: center;
+  }
 }
