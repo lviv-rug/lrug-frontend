@@ -5,13 +5,13 @@ export default Ember.ObjectController.extend({
 
   setJobs: function() {
     var that = this;
-    var currentJobID = that.get("id");
 
     var jobs = this.store.find('jobs')
         .then(function(data) {
           that.set("jobs", data);
+
         });
 
-    }.observes("id").on("init")
+  }.observes("id").on("init")
 
 });
