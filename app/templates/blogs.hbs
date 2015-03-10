@@ -6,7 +6,7 @@
 
     {{#each blog in model}}
       <div class="items">
-        <h2><a href="#" class="items-title">{{blog.title}}</a></h2>
+        <h2>{{#link-to 'blog' blog classNames="items-title"}}{{blog.title}}{{/link-to}}</h2>
         <div class="items-title-bottom">
           {{blog.date}}, {{blog.time}}&nbsp;&nbsp;&nbsp;{{blog.author}}
         </div>
@@ -15,7 +15,7 @@
           {{blog.smallDescription}}
         </div>
 
-        <a href="#" class="read-more">Читати далі</a>
+        {{#link-to 'blog' blog classNames="read-more"}}Читати далі{{/link-to}}
 
       </div>
     {{/each}}
