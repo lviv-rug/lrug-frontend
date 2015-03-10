@@ -12,8 +12,6 @@ export default Ember.ObjectController.extend({
           that.set("jobs", data);
         });
 
-
-
-  }.observes("id").on("init")
+    }.observes("id").on("init")
 
 });

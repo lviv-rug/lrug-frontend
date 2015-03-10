@@ -1,0 +1,13 @@
+.pagination {
+  margin: 50px 0;
+}
+.pagination-link.active {
+  display: none;
+}
+.pagination-link {
+  margin: 0 10px 15px 0;
+  font-size: 16px;
+}
+.pagination-link:hover {
+  box-shadow: none;
+}

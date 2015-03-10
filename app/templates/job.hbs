@@ -16,18 +16,33 @@
       </div>
       <hr />
 
-      <div class="job-description">{{description}}</p>
+      <div class="job-description">{{description}}</div>
 
       <div class="share">
         <h3 class="h3--bold">Поділитись вакансією з друзями</h3>
       </div>
       <hr />
 
-      {{#each job in jobs}}
-        {{#link-to 'job' job classNames="jobs-title" }}{{job.title}}{{/link-to}} <br />
-      {{/each}}
+      <div class="pagination">
+        {{#each job in jobs}}
+          {{#link-to 'job' job classNames="pagination-link" }}{{job.title}}{{/link-to}}
+        {{/each}}
+      </div>
 
+    </div>
+  </div>
 
+  <div class="col-xs-12 col-sm-4">
+    <div class="on-email">
+      <div class="on-email_label">Нові вакансії на email</div>
+      <form>
+        <input type="text" placeholder="ваш email">
+        <button>Підписатись</button>
+      </form>
+    </div>
+
+    <div class="add-job">
+      <a href="#">+ Додати вакансію</a>
     </div>
   </div>
 </div>
