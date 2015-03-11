@@ -33,7 +33,8 @@ a:hover {
   box-shadow: none;
 }
 .logo,
-.logo:hover {
+.logo:hover,
+.logo:focus {
   color: $color-cinderella;
 }
 .header-menu {
