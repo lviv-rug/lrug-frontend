@@ -25,10 +25,11 @@
 
       <div class="pagination">
         {{#if prevPage}}
-          {{#link-to 'job' prevPage classNames="pagination-link" }}prevPage{{prevPage.title}}{{/link-to}}
+          {{#link-to 'job' prevPage classNames="pagination-link" }}{{prevJob.title}}{{/link-to}}
         {{/if}}
+
         {{#if nextPage}}
-          {{#link-to 'job' nextPage classNames="pagination-link" }}nextPage{{nextPage.title}}{{/link-to}}
+          {{#link-to 'job' nextPage classNames="pagination-link" }}{{nextJob.title}}{{/link-to}}
         {{/if}}
       </div>
 
