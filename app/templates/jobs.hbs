@@ -16,10 +16,9 @@
 
     {{#each job in model}}
 
-
-      <div class="jobs">
-        <h2>{{#link-to 'job' job classNames="jobs-title" }}{{job.title}}{{/link-to}}</h2>
-        <div class="jobs-title-bottom">
+      <div class="items">
+        <h2>{{#link-to 'job' job classNames="items-title" }}{{job.title}}{{/link-to}}</h2>
+        <div class="items-title-bottom">
           <a href="#">{{job.city}}</a>
           <span>{{job.price}} $</span>
           <span>
@@ -31,7 +30,7 @@
           </span>
         </div>
 
-        <div class="jobs-description">
+        <div class="items-description">
           {{job.smallDescription}}
         </div>
 
