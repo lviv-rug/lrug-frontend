@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-8">
+    <header class="items-header">
+      <h1>Блог LRUG</h1>
+    </header>
+
+    {{#each blog in model}}
+      <div class="items">
+        <h2>{{#link-to 'blog' blog classNames="items-title"}}{{blog.title}}{{/link-to}}</h2>
+        <div class="items-title-bottom">
+          {{blog.date}}, {{blog.time}}&nbsp;&nbsp;&nbsp;{{blog.author}}
+        </div>
+
+        <div class="items-description">
+          {{blog.smallDescription}}
+        </div>
+
+        {{#link-to 'blog' blog classNames="read-more"}}Читати далі{{/link-to}}
+
+      </div>
+    {{/each}}
+  </div>
+</div>
