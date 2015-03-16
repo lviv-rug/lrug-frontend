@@ -27,9 +27,20 @@
   line-height: 24px;
   padding: 10px 0 30px;
 }
-.item .items-title-bottom {
-  font-weight: bold;
+
+.item {
+  .items-title-bottom {
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 24px;
+    font-weight: normal;
+  }
+  h3 {
+    font-size: 20px;
+  }
 }
+
 .items-header {
   border-bottom: 1px $color-mercury solid;
   background: none;
