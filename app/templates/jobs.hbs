@@ -2,27 +2,24 @@
   <div class="col-xs-12 col-sm-8">
     <h1>Вакансії для Ruby розробників</h1>
 
-      <div class="item-filter" style="margin-bottom: 30px;">
-
+      <div class="item-filter">
         {{view "select"
+          prompt="місто"
           content=cities
           optionValuePath="content.id"
           optionLabelPath="content.city"
           selection=selectedCity}}
-
-
       </div>
 
-
-    {{#each job in model}}
+    {{#each filteredContent}}
 
       <div class="items">
-        <h2>{{#link-to 'job' job classNames="items-title" }}{{job.title}}{{/link-to}}</h2>
+        <h2>{{#link-to 'job' this classNames="items-title" }}{{title}}{{/link-to}}</h2>
         <div class="items-title-bottom">
-          <a href="#">{{job.city}}</a>
-          <span>{{job.price}} $</span>
+          <a>{{city}}</a>
+          <span>{{price}} $</span>
           <span>
-            {{#if job.jobTime}}
+            {{#if jobTime}}
               full-time
             {{else}}
               part-time
@@ -31,7 +28,7 @@
         </div>
 
         <div class="items-description">
-          {{job.smallDescription}}
+          {{smallDescription}}
         </div>
 
       </div>

@@ -60,3 +60,17 @@
 .read-more:hover {
   border: 1px $color-red solid;
 }
+
+.item-filter {
+  border-bottom: 1px $color-mercury solid;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+select {
+  width: 138px;
+  height: 27px;
+  border: 1px $color-mercury solid;
+  background: #fff;
+}

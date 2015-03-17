@@ -3,40 +3,29 @@ import Ember from 'ember';
 export default Ember.ArrayController.extend({
   cities: [],
   selectedCity: null,
+  productSearchTerm: '',
 
-  selectedCityChanged: function () {
-    var that = this;
-    var selectedCity = this.get('selectedCity');
+  filteredContent: function(){
+    var selectedCity = this.get('selectedCity.city');
+    var city = this.get('arrangedContent');
+    var rx = new RegExp(selectedCity);
 
-    this.store.find('jobs')
-      .then(function (data){
-        that.set('jobs', data);
+    if (selectedCity !== null) {
+      return city.filter(function(city) {
+        return city.get('city').match(rx);
+      });
+    } else {
+      return city;
+    };
 
-        that.get('jobs')
-          .forEach(function (job, index){
+  }.property('arrangedContent', 'selectedCity'),
 
-            // var filteredContent = job.filterBy('city.id', selectedCity.id);
-            // console.log('filteredContent', filteredContent)
-            console.log('city ---->', job.get('city'))
+  actions : {
 
-
-
-            // console.log('selectedCity.id', selectedCity.id)
-
-            // that.set('filteredContent', filteredContent);
-          });
-
-
-
-
-
-
-      })
-
-
-
-
-
-  }.observes('selectedCity')
+    sortBy: function(property) {
+      this.set('sortProperties', [property]);
+      this.set('sortAscending', !this.get('sortAscending'));
+    }
+  }
 
 });
