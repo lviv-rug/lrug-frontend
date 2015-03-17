@@ -164,6 +164,14 @@ hr {
   right: 10px;
 }
 
+select,
+input {
+  border: 1px $color-mercury solid;
+  background: #fff;
+  font-size: $font-normal;
+  color: $color-black;
+}
+
 @media (min-width: 768px) {
   .header-menu.hide {
     display: block;

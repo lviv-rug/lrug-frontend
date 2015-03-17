@@ -9,6 +9,10 @@
           optionValuePath="content.id"
           optionLabelPath="content.city"
           selection=selectedCity}}
+
+          <span>від</span>
+          {{input type='text' value=filterPrice action="sortBy"}}
+          <span>&#36;</span>
       </div>
 
     {{#each filteredContent}}

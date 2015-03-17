@@ -4,15 +4,21 @@ export default Ember.ArrayController.extend({
   cities: [],
   selectedCity: null,
   productSearchTerm: '',
+  filterPrice: '',
 
   filteredContent: function(){
+    var filterPrice = this.get('filterPrice');
+
     var selectedCity = this.get('selectedCity.city');
     var city = this.get('arrangedContent');
     var rx = new RegExp(selectedCity);
 
     if (selectedCity !== null) {
       return city.filter(function(city) {
-        return city.get('city').match(rx);
+        if ((filterPrice !== null) && (parseInt(city.get('price')) >= filterPrice) ) {
+          return (city.get('city').match(rx))
+        };
+
       });
     } else {
       return city;
@@ -20,8 +26,7 @@ export default Ember.ArrayController.extend({
 
   }.property('arrangedContent', 'selectedCity'),
 
-  actions : {
-
+  actions: {
     sortBy: function(property) {
       this.set('sortProperties', [property]);
       this.set('sortAscending', !this.get('sortAscending'));
