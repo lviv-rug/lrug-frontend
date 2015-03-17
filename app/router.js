@@ -11,6 +11,7 @@ Router.map(function() {
   this.resource('job', { path: 'jobs/:jobs_id' });
   this.resource('blogs');
   this.resource('blog', { path: 'blogs/:blogs_id' });
+  this.route("create-job");
 });
 
 export default Router;

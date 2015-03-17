@@ -164,6 +164,15 @@ hr {
   right: 10px;
 }
 
+select,
+input,
+textarea {
+  border: 1px $color-mercury solid;
+  background: $color-white;
+  font-size: $font-normal;
+  color: $color-black;
+}
+
 @media (min-width: 768px) {
   .header-menu.hide {
     display: block;
