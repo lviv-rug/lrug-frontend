@@ -9,8 +9,8 @@ Router.map(function() {
   this.route('about');
   this.resource('jobs');
   this.resource('job', { path: 'jobs/:jobs_id' });
-  this.resource('blogs');
-  this.resource('blog', { path: 'blogs/:blogs_id' });
+  this.route("blog");
+  this.resource("post", { path: 'blog/:blog_id' });
 });
 
 export default Router;

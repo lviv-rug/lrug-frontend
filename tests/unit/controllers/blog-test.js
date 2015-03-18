@@ -3,7 +3,7 @@ import {
   test
 } from 'ember-qunit';
 
-moduleFor('controller:blogs', 'BlogsController', {
+moduleFor('controller:blog', 'BlogController', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });

@@ -1,0 +1,81 @@
+.jobs {
+  border-bottom: 1px $color-mercury solid;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+}
+.jobs:last-child {
+  border-bottom: none;
+}
+
+.jobs-title-bottom {
+  background: $color-seashell-peach;
+  border-radius: 50px;
+  padding: 5px 10px;
+  margin-bottom: 15px;
+  display: inline-block;
+  font-weight: 400;
+}
+.jobs-title-bottom a,
+.jobs-title-bottom span {
+  margin: 0 10px;
+}
+
+.job-description {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 10px 0 30px;
+}
+.job .jobs-title-bottom {
+  font-weight: bold;
+}
+
+.on-email {
+  padding: 25px 20px;
+  margin-bottom: 30px;
+  border: 1px $color-azalea solid;
+}
+.on-email input {
+  line-height: 18px;
+  padding: 4px 10px;
+  display: block;
+  margin-bottom: 10px;
+  border: 1px $color-mercury solid;
+}
+.on-email_label {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+button {
+  border: none;
+  color: $color-white;
+  border-radius: 4px;
+  padding: 5px 10px;
+  background: $color-red-orange; /* Old browsers */
+  background: -moz-linear-gradient(top,  $color-red-orange 0%, $color-thunderbird 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color-red-orange), color-stop(100%,$color-thunderbird)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  $color-red-orange 0%,$color-thunderbird 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $color-red-orange 0%,$color-thunderbird 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  $color-red-orange 0%,$color-thunderbird 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  $color-red-orange 0%,$color-thunderbird 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-red-orange', endColorstr='$color-thunderbird',GradientType=0 ); /* IE6-9 */
+}
+button:hover {
+  background: $color-thunderbird; /* Old browsers */
+  background: -moz-linear-gradient(top,  $color-thunderbird 0%, $color-red-orange 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color-thunderbird), color-stop(100%,$color-red-orange)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  $color-thunderbird 0%,$color-red-orange 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $color-thunderbird 0%,$color-red-orange 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  $color-thunderbird 0%,$color-red-orange 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  $color-thunderbird 0%,$color-red-orange 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-thunderbird', endColorstr='$color-red-orange',GradientType=0 ); /* IE6-9 */
+}
+
+.add-job a {
+  display: inline-block;
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.add-job a:hover {
+  box-shadow: none;
+}
