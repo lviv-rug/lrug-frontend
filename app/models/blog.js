@@ -1,6 +1,6 @@
 import DS from 'ember-data';
 
-var Blogs = DS.Model.extend({
+var Blog = DS.Model.extend({
   title: DS.attr(),
   city: DS.attr(),
   date: DS.attr(),
@@ -10,7 +10,7 @@ var Blogs = DS.Model.extend({
   description: DS.attr()
 });
 
-Blogs.reopenClass({
+Blog.reopenClass({
   FIXTURES: [
     {
       id: 1,
@@ -41,4 +41,4 @@ Blogs.reopenClass({
   }
 ]});
 
-export default Blogs;
+export default Blog;
