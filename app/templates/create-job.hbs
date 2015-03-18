@@ -1,50 +1,51 @@
 <div class="col-xs-12 col-sm-8">
   <h1>Додати вакансію</h1>
   <form class="create-job">
+
     <div class="job-item">
       <label for="job-position">Позиція</label>
-      <input type="text" id='job-position'>
+      {{input type="text" value=position id="job-position"}}
     </div>
 
     <div class="job-item">
       <label for="job-company">Компанія</label>
-      <input type="text" id="job-company">
+      {{input type="text" value=company id="job-company"}}
     </div>
 
     <div class="job-item">
       <label for="job-link">Посилання</label>
-      <input type="text" id="job-link">
+      {{input type="text" value=link id="job-link"}}
     </div>
 
     <div class="job-item">
       <label for="job-state">Місто, країна</label>
-      <input type="text" id="job-state">
+      {{input type="text" value=state id="job-state"}}
     </div>
 
     <div class="job-item">
       <label for="job-salary">Зарплата в &#36;</label>
-      <input type="text" id="job-salary">
+      {{input type="text" value=salary id="job-salary"}}
     </div>
 
     <div class="job-item">
       <label for="job-about">Детальніше про вакансію</label>
-      <textarea id="job-about"></textarea>
+      <textarea id="job-about" value=description></textarea>
     </div>
 
     <div class="job-item job-item--small-input">
       <label for="">Вакансія відкрита до</label>
-      <input type="text">
-      <input type="text">
+      {{input type="text"}}
+      {{input type="text"}}
 
       <span>2 тижні</span>
     </div>
 
     <div class="job-item">
       <label for="job-email">Ваш email</label>
-      <input type="text" id="job-email">
+      {{input type="text" id="job-email" value=email}}
     </div>
 
-    <button>Надіслати</button>
+    <button {{action 'createJob'}}>Надіслати</button>
 
   </form>
 </div>
