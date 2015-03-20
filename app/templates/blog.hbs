@@ -1,17 +1,33 @@
 <div class="row">
   <div class="col-xs-12 col-sm-8">
-    <div class="item">
-      <h1>{{title}}</h1>
+    <header class="items-header">
+      <h1>Блог LRUG</h1>
+    </header>
 
-      <div class="items-title-bottom">
-        {{date}}, {{time}}&nbsp;&nbsp;&nbsp;{{author}}
+    {{#each post in model}}
+      <div class="items">
+        <h2>{{#link-to 'post' post classNames="items-title"}}{{post.title}}{{/link-to}}</h2>
+        <div class="items-title-bottom">
+          {{post.date}}, {{post.time}}&nbsp;&nbsp;&nbsp;{{post.author}}
+        </div>
+
+        <div class="items-description">
+          {{post.smallDescription}}
+        </div>
+
+        {{#link-to 'post' post classNames="read-more"}}Читати далі{{/link-to}}
+
       </div>
-      <hr />
+    {{/each}}
+  </div>
 
-      <div class="item-description">{{{description}}}</p>
-
-      <hr />
-
+  <div class="col-xs-12 col-sm-4">
+    <div class="on-email on-email--blog">
+      <div class="on-email_rss">Підписуйтесь <a>на RSS</a></div>
+      <div class="on-email_social">
+        Слідкуйте в соцмережах:
+        <img src="../images/social.png" alt="">
+      </div>
     </div>
   </div>
 </div>

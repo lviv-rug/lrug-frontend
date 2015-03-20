@@ -1,15 +1,13 @@
-.items {
+.jobs {
   border-bottom: 1px $color-mercury solid;
   margin-bottom: 25px;
   padding-bottom: 20px;
 }
-.items:last-child {
+.jobs:last-child {
   border-bottom: none;
 }
-.items-title {
-  margin: 0 0 15px 0;
-}
-.items-title-bottom {
+
+.jobs-title-bottom {
   background: $color-seashell-peach;
   border-radius: 50px;
   padding: 5px 10px;
@@ -17,73 +15,24 @@
   display: inline-block;
   font-weight: 400;
 }
-.items-title-bottom a,
-.items-title-bottom span {
+.jobs-title-bottom a,
+.jobs-title-bottom span {
   margin: 0 10px;
 }
 
-.item-description {
+.job-description {
   font-size: 16px;
   line-height: 24px;
   padding: 10px 0 30px;
 }
-
-.item {
-  .items-title-bottom {
-    font-weight: bold;
-  }
-  h2 {
-    font-size: 24px;
-    font-weight: normal;
-  }
-  h3 {
-    font-size: 20px;
-  }
-}
-
-.items-header {
-  border-bottom: 1px $color-mercury solid;
-  background: none;
-  margin-bottom: 20px;
-}
-
-.read-more {
-  padding: 5px 20px;
-  background: $color-white;
-  border: 1px $color-wewak solid;
-  border-radius: 50px;
-  color: $color-red;
-  box-shadow: none;
-  margin-top: 15px;
-  display: inline-block;
-}
-.read-more:hover {
-  border: 1px $color-red solid;
-}
-
-.item-filter {
-  border-bottom: 1px $color-mercury solid;
-  padding-bottom: 20px;
-  margin-bottom: 30px;
-  margin-top: 20px;
-
-  select {
-    width: 150px;
-    height: 27px;
-    margin-right: 48px;
-  }
-  input {
-    width: 80px;
-    height: auto;
-    line-height: 16px;
-    padding: 5px 10px;
-  }
+.job .jobs-title-bottom {
+  font-weight: bold;
 }
 
 .on-email {
   padding: 25px 20px;
   margin-bottom: 30px;
-  border: 2px $color-wewak dashed;
+  border: 1px $color-azalea solid;
 }
 .on-email input {
   line-height: 18px;
@@ -91,7 +40,6 @@
   display: block;
   margin-bottom: 10px;
   border: 1px $color-mercury solid;
-  width: calc(100% - 20px);
 }
 .on-email_label {
   margin-bottom: 15px;
@@ -127,75 +75,7 @@ button:hover {
   margin-left: 20px;
   font-weight: bold;
   font-size: 16px;
-  line-height: 22px;
 }
 .add-job a:hover {
   box-shadow: none;
-}
-
-
-.create-job {
-  margin-top: 30px;
-
-  input {
-    width: calc(70% - 26px);
-    line-height: 16px;
-    padding: 5px 10px;
-  }
-  textarea {
-    width: calc(70% - 26px);
-    height: 150px;
-    resize: vertical;
-    padding: 5px 10px;
-  }
-  label {
-    width: 30%;
-    display: inline-block;
-  }
-  .job-item {
-    margin-bottom: 20px;
-  }
-  .job-item--small-input input {
-    width: 10%;
-    margin-right: 20px;
-  }
-}
-
-.on-email_rss {
-  font-size: 16px;
-  margin-bottom: 22px;
-}
-.on-email_rss a {
-  color: $color-tangerine;
-  box-shadow: none;
-
-  &:hover {
-    color: $color-buddha-gold;
-  }
-}
-.on-email_social {
-  font-size: 14px;
-
-  img {
-    width: 100%;
-    margin-top: 10px;
-  }
-}
-
-@media (max-width: 768px) {
-  .on-email--blog,
-  .add-job a {
-    display: none;
-  }
-}
-
-@media (max-width:480px) {
-  .item-filter {
-
-    select {
-      width: 100%;
-      margin-bottom: 13px;
-    }
-
-  }
 }
