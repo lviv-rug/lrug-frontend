@@ -20,7 +20,9 @@
                 </div>
               </div>
               <div class="col-xs-12 col-sm-9">
-                <h4><a>{{event.title}}</a></h4>
+                <h4>
+                  {{#link-to 'event' event classNames="items-title"}}{{event.title}}{{/link-to}}
+                </h4>
                 <div class="event-author">{{event.author}}</div>
                 {{event.position}} &nbsp; в &nbsp; {{event.company}}, &nbsp; {{event.city}}
               </div>

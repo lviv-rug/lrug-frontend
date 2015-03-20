@@ -35,6 +35,15 @@
   }
 }
 
+.event--user-image__small {
+  height: 35px;
+  width: 35px;
+
+  img {
+    height: 35px;
+  }
+}
+
 .event {
   margin-bottom: 40px;
 
@@ -50,5 +59,60 @@
   .event-author {
     font-size: $font-h4;
     margin-bottom: 5px;
+  }
+}
+
+
+.event-page {
+  flex-direction: row-reverse;
+
+  a {
+    display: inline-block;
+  }
+
+  .events--title {
+    h2 {
+      font-size: $font-h2;
+      margin: 0;
+    }
+    span {
+      font-size: 14px;
+      margin-left: 0;
+      display: block;
+    }
+  }
+}
+
+.event-social {
+  border-top: 1px $color-mercury solid;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 30px;
+}
+
+.list-items {
+  margin: 25px 0 0 0;
+  padding: 0;
+
+  .event--user-image {
+    float: left;
+  }
+
+  li {
+    overflow: hidden;
+    margin-bottom: 15px;
+  }
+
+  a {
+    max-width: 80%;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: $font-h4;
+  }
+
+  a.active {
+    box-shadow: none;
+    color: $color-black;
   }
 }
