@@ -1,0 +1,54 @@
+.events {
+  border-bottom: 1px $color-mercury solid;
+  margin-bottom: 45px;
+}
+.events-about {
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+.events--title {
+
+  h2 {
+    font-size: $font-h1;
+    font-weight: 400;
+    display: inline-block;
+    width: auto;
+  }
+  span {
+    color: $color-silver;
+    font-size: $font-h3;
+    margin-left: 20px;
+  }
+
+}
+
+.event--user-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  overflow: hidden;
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+}
+
+.event {
+  margin-bottom: 40px;
+
+  h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  a {
+    font-weight: 600;
+  }
+
+  .event-author {
+    font-size: $font-h4;
+    margin-bottom: 5px;
+  }
+}
