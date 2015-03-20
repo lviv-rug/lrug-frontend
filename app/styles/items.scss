@@ -68,20 +68,112 @@
   margin-top: 20px;
 
   select {
-    width: 138px;
+    width: 150px;
     height: 27px;
     margin-right: 48px;
   }
   input {
-    width: 70px;
+    width: 80px;
     height: auto;
     line-height: 16px;
     padding: 5px 10px;
   }
 }
 
+
 .item--event {
   border-bottom: 1px $color-mercury solid;
   padding-bottom: 23px;
   margin-bottom: 15px;
+}
+.on-email {
+  padding: 25px 20px;
+  margin-bottom: 30px;
+  border: 2px $color-wewak dashed;
+}
+.on-email input {
+  line-height: 18px;
+  padding: 4px 10px;
+  display: block;
+  margin-bottom: 10px;
+  border: 1px $color-mercury solid;
+  width: calc(100% - 20px);
+}
+.on-email_label {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+button {
+  border: none;
+  color: $color-white;
+  border-radius: 4px;
+  padding: 5px 10px;
+  background: $color-red-orange; /* Old browsers */
+  background: -moz-linear-gradient(top,  $color-red-orange 0%, $color-thunderbird 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color-red-orange), color-stop(100%,$color-thunderbird)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  $color-red-orange 0%,$color-thunderbird 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $color-red-orange 0%,$color-thunderbird 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  $color-red-orange 0%,$color-thunderbird 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  $color-red-orange 0%,$color-thunderbird 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-red-orange', endColorstr='$color-thunderbird',GradientType=0 ); /* IE6-9 */
+}
+button:hover {
+  background: $color-thunderbird; /* Old browsers */
+  background: -moz-linear-gradient(top,  $color-thunderbird 0%, $color-red-orange 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color-thunderbird), color-stop(100%,$color-red-orange)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  $color-thunderbird 0%,$color-red-orange 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $color-thunderbird 0%,$color-red-orange 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  $color-thunderbird 0%,$color-red-orange 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  $color-thunderbird 0%,$color-red-orange 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-thunderbird', endColorstr='$color-red-orange',GradientType=0 ); /* IE6-9 */
+}
+
+.add-job a {
+  display: inline-block;
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+}
+.add-job a:hover {
+  box-shadow: none;
+}
+
+.on-email_rss {
+  font-size: 16px;
+  margin-bottom: 22px;
+}
+.on-email_rss a {
+  color: $color-tangerine;
+  box-shadow: none;
+
+  &:hover {
+    color: $color-buddha-gold;
+  }
+}
+.on-email_social {
+  font-size: 14px;
+
+  img {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .on-email--blog,
+  .add-job a {
+    display: none;
+  }
+}
+
+@media (max-width:480px) {
+  .item-filter {
+
+    select {
+      width: 100%;
+      margin-bottom: 13px;
+    }
+
+  }
 }

@@ -101,6 +101,11 @@
   li {
     overflow: hidden;
     margin-bottom: 15px;
+    padding-left: 0;
+
+    &:before {
+      display: none;
+    }
   }
 
   a {

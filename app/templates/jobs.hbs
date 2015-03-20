@@ -1,6 +1,13 @@
 <div class="row">
   <div class="col-xs-12 col-sm-8">
-    <h1>Вакансії для Ruby розробників</h1>
+    <h1 class="desktop-title">Вакансії для Ruby розробників</h1>
+
+    <div class="mobile-title">
+      <h1>Вакансії</h1>
+      <div class="add-job">
+        <a href="#">+ Додати вакансію</a>
+      </div>
+    </div>
 
       <div class="item-filter">
         {{view "select"
@@ -37,5 +44,19 @@
 
       </div>
     {{/each}}
+  </div>
+
+  <div class="col-xs-12 col-sm-4">
+    <div class="on-email">
+      <div class="on-email_label">Нові вакансії на email</div>
+      <form>
+        <input type="text" placeholder="ваш email">
+        <button>Підписатись</button>
+      </form>
+    </div>
+
+    <div class="add-job">
+      <a href="#">+ Додати вакансію</a>
+    </div>
   </div>
 </div>
