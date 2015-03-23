@@ -21,6 +21,10 @@
 .items-title-bottom span {
   margin: 0 10px;
 }
+.items-description {
+  height: 160px;
+  overflow: hidden;
+}
 
 .item-description {
   font-size: 16px;
@@ -142,6 +146,7 @@ button:hover {
 
 .create-job {
   margin-top: 30px;
+  margin-bottom: 40px;
 
   input {
     width: calc(70% - 26px);
@@ -164,6 +169,16 @@ button:hover {
   .job-item--small-input input {
     width: 10%;
     margin-right: 20px;
+  }
+  button {
+    margin-left: 200px;
+  }
+
+  .hide {
+    display: none;
+  }
+  .show {
+    display: block;
   }
 }
 

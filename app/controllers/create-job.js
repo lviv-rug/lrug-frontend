@@ -11,15 +11,18 @@ export default Ember.ArrayController.extend({
         .then(function(data) {
           that.set("jobs", data);
 
-          var position = that.get("position");
-          var company = that.get("company");
-          var link = that.get("link");
-          var state = that.get("state");
-          var salary = that.get("salary");
-          var email = that.get("email");
-          var description = that.get("description");
+
+          var id = that.get('jobs.length') + 1,
+              position = that.get("position"),
+              company = that.get("company"),
+              link = that.get("link"),
+              state = that.get("state"),
+              salary = that.get("salary"),
+              email = that.get("email"),
+              description = that.get("description");
 
           var jobs = that.store.createRecord('jobs', {
+            id: id,
             position: position,
             company: company,
             city: state,
@@ -31,12 +34,15 @@ export default Ember.ArrayController.extend({
 
           jobs.save();
 
-
+          that.set('position', '');
+          that.set('company', '');
+          that.set('link', '');
+          that.set('state', '');
+          that.set('salary', '');
+          that.set('email', '');
+          that.set('description', '');
 
         });
-
-
-
 
     }
 
