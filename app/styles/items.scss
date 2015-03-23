@@ -174,12 +174,12 @@ button:hover {
     margin-left: 200px;
   }
 
-  .hide {
-    display: none;
-  }
-  .show {
-    display: block;
-  }
+  .hide { display: none; }
+  .show { display: block; }
+
+  .messages { padding: 10px; margin-bottom: 20px; font-size: 18px; }
+  .error    { background: #ffb4ad; color: #fff;}
+  .success  { background: #E9F5DE; }
 }
 
 .on-email_rss {
