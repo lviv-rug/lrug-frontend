@@ -1,0 +1,53 @@
+<div class="row event-page">
+
+  <div class="col-xs-12 col-sm-8">
+    <div class="row item item--event">
+      <div class="col-xs-12 col-sm-2">
+        <div class="event--user-image">
+          {{#if imageUser}}
+            <img {{bind-attr src=imageUser}}>
+          {{else}}
+            <img src='/images/useravatar.png'>
+          {{/if}}
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-10">
+        <h1>{{title}}</h1>
+
+        <div class="event-author"><a>{{author}}</a></div>
+        <div>
+          {{position}} &nbsp; в &nbsp; <a>{{company}}</a>, &nbsp; {{city}}
+        </div>
+      </div>
+    </div>
+
+    {{{description}}}
+
+    <div class="event-social">
+      <img src="../images/social.png" alt="">
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-4">
+    <div class="events--title">
+      <h2>LRUG №4</h2>
+      <span>25 березня 2014 року</span>
+    </div>
+
+    <ul class="list-items">
+      {{#each event in events}}
+        <li>
+          <div class="event--user-image event--user-image__small">
+            {{#if event.imageUser}}
+              <img {{bind-attr src=event.imageUser}}>
+            {{else}}
+              <img src='/images/useravatar.png'>
+            {{/if}}
+          </div>
+          {{#link-to 'event' event}}{{event.title}}{{/link-to}}
+        </li>
+      {{/each}}
+    <ul>
+
+  </div>
+</div>
