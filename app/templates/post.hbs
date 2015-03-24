@@ -13,13 +13,7 @@
       <hr />
 
       <div class="pagination">
-        {{#if prevPage}}
-          {{#link-to 'post' prevPage classNames="pagination-link" }}{{prevPost.title}}{{/link-to}}
-        {{/if}}
-
-        {{#if nextPage}}
-          {{#link-to 'post' nextPage classNames="pagination-link" }}{{nextPost.title}}{{/link-to}}
-        {{/if}}
+        {{pager-navigation store=controller.store itemId=id modelName='blog' page='post'}}
       </div>
 
     </div>
