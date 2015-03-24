@@ -5,7 +5,6 @@ export default Ember.Component.extend({
   pagination: function() {
     var that = this;
 
-
     this.get('controller').get('store').find(this.get('modelName'))
       .then(function(data) {
         that.set("items", data);
@@ -38,7 +37,7 @@ export default Ember.Component.extend({
 
       });
 
-  }.observes("model").on("init"),
+  }.observes("itemId").on("init"),
 
   prevItem : function() {
     if (this.get("prevPage") !== undefined) {
