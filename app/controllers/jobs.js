@@ -8,9 +8,6 @@ export default Ember.ArrayController.extend({
 
   filteredContent: function(){
     var filterPrice = this.get('filterPrice');
-
-    localStorage.filterPrice = filterPrice;
-
     var selectedCity = this.get('selectedCity.city');
     var city = this.get('arrangedContent');
     var rx = new RegExp(selectedCity);

@@ -2,8 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function() {
-    // return this.store.find('jobs');
-    return JSON.parse(localStorage.Jobs);
+    return this.store.find('jobs');
   },
 
   setupController: function(controller, model) {
