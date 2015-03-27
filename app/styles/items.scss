@@ -160,6 +160,13 @@ button:hover {
   }
 }
 
+.hide { display: none; }
+.show { display: block; }
+
+.messages { padding: 10px; margin-bottom: 20px; font-size: 18px; }
+.error    { background: #ffb4ad; color: #fff;}
+.success  { background: #E9F5DE; }
+
 @media (max-width: 768px) {
   .on-email--blog,
   .add-job a {

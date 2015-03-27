@@ -1,4 +1,7 @@
 <form>
-  {{input type="text" value=subscribeEmail placeholder="ваш email"}}
+  <div class="messages error hide">Error!</div>
+  <div class="messages success hide">Success!</div>
+
+  {{input type="text" classNames='my-email' value=subscribeEmail placeholder="ваш email"}}
   <button {{action 'subscribe'}}>Підписатись</button>
 </form>
