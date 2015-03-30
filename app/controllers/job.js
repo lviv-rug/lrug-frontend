@@ -15,8 +15,6 @@ export default Ember.ObjectController.extend({
               nextJob = currentJob+1,
               prevJob = currentJob-1;
 
-              console.log(JSON.parse(localStorage.Jobs));
-
           that.get('jobs')
             .forEach(function (job, index) {
 
