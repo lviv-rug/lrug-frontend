@@ -24,13 +24,7 @@
       <hr />
 
       <div class="pagination">
-        {{#if prevPage}}
-          {{#link-to 'job' prevPage classNames="pagination-link" }}{{prevJob.position}} в {{prevJob.company}}{{/link-to}}
-        {{/if}}
-
-        {{#if nextPage}}
-          {{#link-to 'job' nextPage classNames="pagination-link" }}{{nextJob.position}} в {{nextJob.company}}{{/link-to}}
-        {{/if}}
+        {{pager-navigation store=controller.store itemId=id modelName='jobs' page='job'}}
       </div>
 
     </div>
