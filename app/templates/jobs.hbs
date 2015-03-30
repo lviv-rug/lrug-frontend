@@ -26,6 +26,7 @@
 
       <div class="items">
         <h2>{{#link-to 'job' this classNames="items-title" }}{{title}}{{/link-to}}</h2>
+
         <div class="items-title-bottom">
           <a>{{city}}</a>
           <span>{{price}} $</span>
@@ -49,10 +50,7 @@
   <div class="col-xs-12 col-sm-4">
     <div class="on-email">
       <div class="on-email_label">Нові вакансії на email</div>
-      <form>
-        <input type="text" placeholder="ваш email">
-        <button>Підписатись</button>
-      </form>
+      {{subscribe-to}}
     </div>
 
     <div class="add-job">
