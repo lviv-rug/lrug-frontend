@@ -2,35 +2,42 @@
   <div class="col-xs-12">
     <div class="events">
       <div class="events--title">
+
         <h2>LRUG №4</h2>
         <span>25 березня 2014 року</span>
       </div>
 
+{{#each eventDate}}
+  {{this}}
+{{/each}}
       <div class="row">
-        {{#each event in model}}
+        {{#each sortEvents}}
+
           <div class="col-xs-12 col-sm-6 event">
-            <div class="row">
-              <div class="col-xs-12 col-sm-3">
-                <div class="event--user-image">
-                  {{#if event.imageUser}}
-                    <img {{bind-attr src=event.imageUser}}>
-                  {{else}}
-                    <img src='/images/useravatar.png'>
-                  {{/if}}
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <div class="event--user-image">
+                    {{#if imageUser}}
+                      <img {{bind-attr src=imageUser}} alt="">
+                    {{else}}
+                      <img src='/images/useravatar.png' alt="">
+                    {{/if}}
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <h4>
+                    {{#link-to 'event' this classNames="items-title"}}{{title}}{{/link-to}}
+                  </h4>
+                  ({{date}}) <br />
+                  <div class="event-author">{{author}}</div>
+                  {{position}} &nbsp; в &nbsp; {{company}}, &nbsp; {{city}}
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-9">
-                <h4>
-                  {{#link-to 'event' event classNames="items-title"}}{{event.title}}{{/link-to}}
-                </h4>
-                <div class="event-author">{{event.author}}</div>
-                {{event.position}} &nbsp; в &nbsp; {{event.company}}, &nbsp; {{event.city}}
-              </div>
-            </div>
 
-          </div>
+            </div>
         {{/each}}
       </div>
+
     </div>
 
     <div class="events-about">
