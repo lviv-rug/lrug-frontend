@@ -1,8 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  sortProperties: ['date'],
-  sortAscending: true,
 
   events: function() {
     var that = this;
@@ -28,6 +26,7 @@ export default Ember.Controller.extend({
             return i==a.indexOf(el);
           });
 
+          that.set('sortDate', sortDate);
 
 /////////////////////////////////////////////
 
@@ -37,28 +36,23 @@ export default Ember.Controller.extend({
 
           for(var i = 0; i < sortEventsLength; i++ ) {
 
-            var q2 = that.get('events')
+            that.get('events')
               .forEach(function (event, index) {
-
                 if(event.get('date') === sortDate[i] ){
-                  dateArray.push(new Date(sortDate[i]).toString())
 
+                  dateArray.push(new Date(sortDate[i]).toString())
                   q3.push(event);
                   return q3;
                 }
 
                 that.set('sortEvents', q3);
-
-                that.set('dateArray', dateArray)
-                // console.log(dateArray)
-
-
+                that.set('date', dateArray);
 
               });
 
-            }
+          }
 
       });
 
-  }.on('init')
+  }.on("init")
 });

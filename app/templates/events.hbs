@@ -1,43 +1,35 @@
 <div class="row events-page">
   <div class="col-xs-12">
     <div class="events">
-      <div class="events--title">
 
-        <h2>LRUG №4</h2>
-        <span>25 березня 2014 року</span>
-      </div>
-
-{{#each eventDate}}
-  {{this}}
-{{/each}}
-      <div class="row">
-        {{#each sortEvents}}
-
-          <div class="col-xs-12 col-sm-6 event">
-              <div class="row">
-                <div class="col-xs-12 col-sm-3">
-                  <div class="event--user-image">
-                    {{#if imageUser}}
-                      <img {{bind-attr src=imageUser}} alt="">
-                    {{else}}
-                      <img src='/images/useravatar.png' alt="">
-                    {{/if}}
+      {{#events-filter store=controller.store sortEvents=sortEvents date=sortDate filteredArray=filteredArray}}
+        <div class="row">
+          {{#each sortEvents}}
+            <div class="col-xs-12 col-sm-6 event">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-3">
+                    <div class="event--user-image">
+                      {{#if imageUser}}
+                        <img {{bind-attr src=imageUser}} alt="">
+                      {{else}}
+                        <img src='/images/useravatar.png' alt="">
+                      {{/if}}
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-9">
+                    <h4>
+                      {{#link-to 'event' this classNames="items-title"}}{{title}}{{/link-to}}
+                    </h4>
+                    ({{date}}) <br />
+                    <div class="event-author">{{author}}</div>
+                    {{position}} &nbsp; в &nbsp; {{company}}, &nbsp; {{city}}
                   </div>
                 </div>
-                <div class="col-xs-12 col-sm-9">
-                  <h4>
-                    {{#link-to 'event' this classNames="items-title"}}{{title}}{{/link-to}}
-                  </h4>
-                  ({{date}}) <br />
-                  <div class="event-author">{{author}}</div>
-                  {{position}} &nbsp; в &nbsp; {{company}}, &nbsp; {{city}}
-                </div>
+
               </div>
-
-            </div>
-        {{/each}}
-      </div>
-
+          {{/each}}
+        </div>
+      {{/events-filter}}
     </div>
 
     <div class="events-about">
