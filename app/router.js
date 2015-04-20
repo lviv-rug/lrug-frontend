@@ -7,10 +7,14 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('about');
+
   this.resource('jobs');
   this.resource('job', { path: 'jobs/:jobs_id' });
+  this.route("create-job");
+
   this.route('blog');
   this.resource('post', { path: 'blog/:blog_id' });
+
   this.route('events');
   this.resource('event', { path: 'events/:events_id' });
 });

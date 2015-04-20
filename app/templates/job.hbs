@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-xs-12 col-sm-8">
     <div class="item">
-      <h1>{{title}}</h1>
+      <h1>{{position}} в {{company}}</h1>
 
       <div class="items-title-bottom">
         <a href="#">{{city}}</a>
@@ -40,7 +40,7 @@
     </div>
 
     <div class="add-job">
-      <a href="#">+ Додати вакансію</a>
+      {{#link-to 'create-job'}}+ Додати вакансію{{/link-to}}
     </div>
   </div>
 </div>

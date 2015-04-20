@@ -25,7 +25,8 @@
     {{#each filteredContent}}
 
       <div class="items">
-        <h2>{{#link-to 'job' this classNames="items-title" }}{{title}}{{/link-to}}</h2>
+        <h2>{{#link-to 'job' this classNames="items-title" }}{{position}} в {{company}}{{/link-to}}</h2>
+
         <div class="items-title-bottom">
           <a>{{city}}</a>
           <span>{{price}} $</span>
@@ -39,7 +40,7 @@
         </div>
 
         <div class="items-description">
-          {{smallDescription}}
+          {{{description}}}
         </div>
 
       </div>
@@ -56,7 +57,7 @@
     </div>
 
     <div class="add-job">
-      <a href="#">+ Додати вакансію</a>
+      {{#link-to 'create-job'}}+ Додати вакансію{{/link-to}}
     </div>
   </div>
 </div>
